@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>page4</title>
+<script LANGUAGE="JavaScript" type="text/javascript">
+function display() {
+  DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=300,height=200')
+  message = "<ul><li><b>Food Id: </b>" + document.form1.id.value;
+  message += "<li><b>Food name: </b>" + document.form1.name.value;
+  message += "<li><b>Food cost: </b>" + document.form1.cost.value;
+  message += "<li><b>Food contact: </b>" + document.form1.contact.value + "</ul>";
+  DispWin.document.write(message);
+}
+</script>
+<style>
+
+body{
+background-color:rgb(204, 0, 0);
+}
+
+</style>
+</head>
+<form name="form1">
+<p><b>Food Id:</b> <input TYPE="TEXT" SIZE="20" NAME="id">
+</p>
+<p><b>Food Name:</b> <input TYPE="TEXT" SIZE="30" NAME="name">
+</p>
+<p><b>Food Cost: </b> <input TYPE="TEXT" SIZE="15" NAME="cost">
+</p>
+<p><b>Food Contact: </b> <input TYPE="TEXT" SIZE="15" NAME="contact">
+</p>
+<p><input TYPE="BUTTON" VALUE="SUBMIT" onClick="display();"></p>
+</form>
+</body>
+</html>

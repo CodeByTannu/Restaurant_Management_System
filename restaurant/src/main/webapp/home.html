@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+body{
+
+ background: transparent;
+ }
+ p{
+ font-color:white;
+ }
+
+ .vcenter{
+ display: grey;
+ vertical-align: middle;
+ float:none;
+ max-width:100%
+ 
+ }
+ .big-box{
+ height:21.5em;
+ width:25.5em;
+ border:1px solid green;
+ float:left;
+ background:rgb(204, 0, 0);
+ text-size:50px;
+ font-color:White;
+ }
+  .small-box{
+ height:21.5em;
+ width:27em;
+ image-size:10px;
+ border:1px solid green;
+ float:left;
+ background:rgb(204, 0, 0);
+ font-color:White;
+ }
+ nav{
+ width:100%;height:400vh;
+ background-image:url('bg.jpg');
+ }
+
+</style>
+</head>
+<body>
+<div class="main">
+  <div class="navbar">
+    <div class="icon">
+      <h2 class="logo">BLOGICA</h2>>
+     </div>
+      <div class="menu">
+                <ul>
+                    <li><a href="About.html">ABOUT</a></li>
+                    
+                    <li><a href="Help.html">HELP</a></li>
+                    <li><a href="Login.jsp">LOGIN</a></li>
+                </ul>
+       </div>
+</div>
+</div>
+<nav>
+
+
+<div class="slideshow-container">
+<background-image: url('back.jpg');>
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="event.png" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="weeding.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="event4.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<div class="container">
+<div class="col-xs-6 vcenter">
+<img src="birthday.jpg" width="432" height="342">
+<div class="big-box"><h1>Birthday Party </h1>
+<p>Birthday parties are truly special for the person whose birthday is being celebrated. Organizing birthday parties is a popular activity nowadays, but these days, even welcome talks are arranged by the individual or by someone close to him or her, such as the individual's parents, brother, sister, or close friends.A birthday is the anniversary of the birth of a person, or figuratively of an institution. Birthdays of people are celebrated in numerous cultures, often with birthday gifts, birthday cards, a birthday party, or a rite of passage.
+
+ </p></div>
+
+</div>
+
+<div class="container">
+<div class="col-xs-6 vcenter">
+<img src="an.jpg" width="446" height="342">
+<div class="small-box"><h1>Anniversary Party</h1>
+<p>An anniversary is the date on which an event took place or an institution was founded in a previous year, and may also refer to the commemoration or celebration of that event. The word was first used for Catholic feasts to commemorate saints.
+
+Most countries celebrate national anniversaries, typically called national days. These could be the date of independence of the nation or the adoption of a new constitution or form of government. There is no definite method for determining the date of establishment of an institution, and it is generally decided within the institution by convention. The important dates in a sitting monarch's reign may also be commemorated, an event often referred to as a "jubilee".</p></div>
+
+
+</div>
+</div>
+<div class="container">&nbsp
+<div class="col-xs-6 vcenter">
+<img src="weeding.jpg" width="432" height="342">
+<div class="big-box"><h1>Weeding </h1>
+<p>A wedding is a ceremony where two people are united in marriage. Wedding traditions and customs vary greatly between cultures, ethnic groups, religions, countries, and social classes. Most wedding ceremonies involve an exchange of marriage vows by a couple, presentation of a gift (offering, rings, symbolic item, flowers, money, dress), and a public proclamation of marriage by an authority figure or celebrant. Special wedding garments are often worn, and the ceremony is sometimes followed by a wedding reception. Music, poetry, prayers, or readings from religious texts or literature are also commonly incorporated into the ceremony, as well as superstitious customs.</p></div>
+</div>
+
+<div class="container">
+<div class="col-xs-6 vcenter">
+<img src="ab.jpg" width="446" height="342">
+<div class="small-box"><h1>Kitty Party</h1>
+<p>In India, kitty parties are social events held as part of an informal savings club. It is a kind of party usually organized by women, and commonly held in the afternoon on a monthly basis.[1]
+
+Kitty refers to the amount collected at the party, every member contributing a certain sum of money each month. The kitty is handed over to one member of the group every month.[2] Chit funds operate along similar principles.[3]
+
+It is usually held at a specified time each month, by a specific group of women. Every member of the group has to host a party at least once. The hosting member organizes food and other logistics.[4] In most of India and Pakistan, it is usually simply referred to as a 'committee'.
+
+The party may include games, and may involve a theme of discussion on a topic with other members.</p></div>
+</div>
+
+</div>
+</div>
+</nav>
+</body>
+</html> 
